@@ -1,0 +1,21 @@
+<html>
+   <head>
+   <script type="text/javascript">
+      function visualiza_formulario() {
+         document.getElementById('formulario').style.visibility='visible';
+         document.getElementById('formulario').style.display='inline';
+         document.getElementById('direccion').style.visibility='hidden';
+         document.getElementById('direccion').style.display='none';
+      };
+   </script>
+   </head>
+   <body>
+      <p>Tu dirección de correo es : </p>
+      <p id="direccion" onclick="visualiza_formulario()">federico@perez.es</p>
+      <form id="formulario" style="visibility:hidden; display:none;">
+         <input type="text" name="cambia" value="federico@perez.es"/>
+      </form>
+      </p>
+      <p>Haz click sobre el correo para cambiarla</p>
+   </body>
+</html>a
