@@ -5,8 +5,12 @@ const tituloNombre = document.querySelector("h3.nombre");
 const parrafoNombreUsuario = document.querySelector("p.nombreUsuario");
 const spanSeguidores = document.querySelector("span.seguidores");
 const spanSiguiendo = document.querySelector("span.siguiendo");
+const spanBiografia = document.querySelector("span.biografia");
+const btnBuscar = document.querySelector("button#buscar");
 
-obtenerDatosGitHub();
+btnBuscar.addEventListener("click", function(){
+  obtenerDatosGitHub();
+}); 
 
 // pasos para obtener los datos
 // 1. crear una fincion asincrona
@@ -36,6 +40,7 @@ async function obtenerDatosGitHub() {
     parrafoNombreUsuario.textContent = user.login;
     spanSeguidores.textContent = user.followers;
     spanSiguiendo.textContent = user.following;
+    spanBiografia.textContent = user.bio;
   } else {
     console.log("Ocurrio un error");
   }
